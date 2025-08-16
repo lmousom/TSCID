@@ -17,6 +17,10 @@ jobs:
       uses: actions/setup-go@v4
       with:
         go-version: '1.21'
+        cache: true
+    
+    - name: Download dependencies
+      run: go mod download
     
     - name: Run tests with coverage
       run: go test -coverprofile=coverage.txt $(go list ./... | grep -v /examples | grep -v /cmd/benchmark)
