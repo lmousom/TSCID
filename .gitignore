@@ -47,3 +47,5 @@ Thumbs.db
 # coverage.out
 coverage.html
 coverage.xml
+coverage.txt
+coverage.out
